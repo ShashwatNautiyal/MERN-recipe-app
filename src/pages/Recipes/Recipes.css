@@ -1,0 +1,79 @@
+.recipes {
+	width: 75%;
+	margin: 3rem auto;
+}
+
+.recipes > p {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 16px;
+	color: #000000;
+	text-transform: uppercase;
+	margin-bottom: 32px;
+}
+
+.yourRecipes {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 72px;
+}
+
+.card > .info {
+	cursor: default;
+}
+
+.info > .actionButtons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.info > .actionButtons > * {
+	cursor: pointer;
+}
+
+.addNewRecipe {
+	width: 100%;
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem auto;
+	height: 70vh;
+	background: #ffffff;
+	box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+	border-radius: 24px;
+}
+
+.addNewRecipe > p:first-child {
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 16px;
+	color: #2d4639;
+	text-transform: uppercase;
+	margin-bottom: 32px;
+}
+
+.addNewRecipe > p:first-child > span {
+	color: #e58686;
+}
+
+.addNewRecipe > button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 16px;
+	background: #07814a;
+	width: 150px;
+	border-radius: 25px;
+	margin-top: 10px;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 16px;
+	color: #ffffff;
+	cursor: pointer;
+	border: none;
+}

@@ -1,0 +1,167 @@
+.editRecipe {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 75%;
+	margin: 3rem auto;
+}
+
+.editRecipe > p:first-child {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 23px;
+	color: #000000;
+	text-transform: uppercase;
+	margin-bottom: 24px;
+}
+
+.editRecipe > button:last-child {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 16px;
+	background: #07814a;
+	border-radius: 25px;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 16px;
+	color: #ffffff;
+	border: none;
+	width: 180px;
+	margin: 2rem 0;
+	cursor: pointer;
+}
+
+.detailsCard {
+	display: grid;
+	max-width: 900px;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+	grid-gap: 72px;
+	width: 100%;
+	grid-gap: 32px;
+	padding: 34px;
+	background: #ffffff;
+	box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+	border-radius: 24px;
+}
+
+.upload {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	text-transform: uppercase;
+}
+
+.upload > p:first-child {
+	margin-bottom: 8px;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 18px;
+	color: #000000;
+}
+
+.upload > input {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.upload > label {
+	width: fit-content;
+}
+
+.upload > label > img {
+	width: 100%;
+	border-radius: 24px;
+	max-width: 400px;
+	max-height: 300px;
+	cursor: pointer;
+	box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+}
+
+.details {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: fit-content;
+}
+
+.details > p:first-child {
+	text-transform: uppercase;
+	margin-bottom: 8px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.details > div {
+	height: 100%;
+}
+
+.details > div > input,
+.details > div > textarea {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 8px 16px;
+	background: #e3efeb;
+	box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
+	width: 100%;
+	border: none;
+	margin-bottom: 10px;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.details > div > textarea {
+	resize: vertical;
+	max-height: 150px;
+	min-height: 32px;
+}
+
+.details > div > div {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+
+.details > div > div > input {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 8px 16px;
+	background: #e3efeb;
+	box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.8);
+	border-radius: 25px;
+	width: 100%;
+	border: none;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.details > div > button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 16px;
+	background: #07814a;
+	width: 102px;
+	border-radius: 25px;
+	margin-top: 10px;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+	color: #ffffff;
+	cursor: pointer;
+	border: none;
+}
+
+.details > div > button:last-child {
+	background-color: #c56d32;
+	margin-left: 8px;
+}

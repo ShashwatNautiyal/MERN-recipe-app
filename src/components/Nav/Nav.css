@@ -1,0 +1,78 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	margin: 32px auto;
+}
+
+.nav > a {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 20px;
+	letter-spacing: -0.1em;
+	color: #2d4639;
+	text-decoration: none;
+}
+
+.nav > a > span {
+	letter-spacing: -0.095em;
+	color: #e5c686;
+}
+
+.searchBox {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 35%;
+	background: #ffffff;
+	border: 1px solid #adb9b0;
+	box-sizing: border-box;
+	border-radius: 25px;
+	padding-right: 8px;
+}
+
+.searchBox > input {
+	width: 100%;
+	font-size: 16px;
+	border: none;
+	padding: 6px 16px;
+	outline: none;
+	border-radius: 25px;
+}
+
+.regBtns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.regBtns > button {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 18px;
+	color: #2d4639;
+	background: #e5e5e5;
+	cursor: pointer;
+}
+
+.regBtns > button:first-child {
+	border: none;
+	margin-right: 16px;
+}
+
+.regBtns > button:last-child {
+	border: 1px solid #2d4639;
+	border-radius: 25px;
+	padding: 4px 10px;
+}
+
+.regBtns > p:first-child {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 18px;
+	color: #2d4639;
+	margin-right: 16px;
+}
