@@ -95,7 +95,7 @@ const AddRecipe = () => {
 		}
 		formData.append("_id", recipeId);
 		axios
-			.put(process.env.REACT_APP_BASE_URL + "recipes/" + recipeId, formData, {
+			.put(process.env.REACT_APP_BASE_URL + "/recipes/" + recipeId, formData, {
 				headers: {
 					"auth-token": localStorage.getItem("user"),
 					"Content-Type": "multipart/form-data",
