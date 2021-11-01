@@ -24,7 +24,7 @@ const AddRecipe = () => {
 
 	useEffect(() => {
 		setHandleLoader(true);
-		axios.get("http://localhost:8000/recipes/" + recipeId).then((response) => {
+		axios.get(process.env.REACT_APP_BASE_URL + "/recipes/" + recipeId).then((response) => {
 			const data = response.data;
 			setRecipeDetails({
 				image: data.image,
@@ -95,7 +95,7 @@ const AddRecipe = () => {
 		}
 		formData.append("_id", recipeId);
 		axios
-			.put("http://localhost:8000/recipes/" + recipeId, formData, {
+			.put(process.env.REACT_APP_BASE_URL + "recipes/" + recipeId, formData, {
 				headers: {
 					"auth-token": localStorage.getItem("user"),
 					"Content-Type": "multipart/form-data",

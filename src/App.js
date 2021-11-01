@@ -38,7 +38,7 @@ function App() {
 						<Route path="/recipes/edit/:recipeId" exact>
 							<EditRecipe />
 						</Route>
-						<Route path="/:recipeId" exact>
+						<Route path="/:recipeId">
 							<Detail />
 						</Route>
 					</Switch>

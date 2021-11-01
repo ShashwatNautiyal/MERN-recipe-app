@@ -61,7 +61,7 @@ const AddRecipe = () => {
 			}
 		}
 		axios
-			.post("http://localhost:8000/recipes", formData, {
+			.post(process.env.REACT_APP_BASE_URL + "/recipes", formData, {
 				headers: {
 					"auth-token": localStorage.getItem("user"),
 					"Content-Type": "multipart/form-data",

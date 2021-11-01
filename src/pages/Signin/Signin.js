@@ -21,7 +21,7 @@ const Signin = () => {
 		};
 
 		axios
-			.post("http://localhost:8000/user/login", JSON.stringify(loginData), {
+			.post(process.env.REACT_APP_BASE_URL + "/user/login", JSON.stringify(loginData), {
 				headers: {
 					"Content-Type": "application/json",
 				},

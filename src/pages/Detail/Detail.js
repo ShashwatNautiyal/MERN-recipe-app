@@ -13,20 +13,21 @@ const Detail = () => {
 	const history = useHistory();
 
 	useEffect(() => {
-		axios.get("http://localhost:8000/recipes").then((response) => {
+		axios.get(process.env.REACT_APP_BASE_URL + "/recipes").then((response) => {
 			setRelated([...response.data]);
 		});
 		// eslint-disable-next-line
-	}, []);
+	}, [history.location]);
 
 	useEffect(() => {
 		setHandleLoader(true);
-		axios.get("http://localhost:8000/recipes/" + recipeId).then((response) => {
+		axios.get(process.env.REACT_APP_BASE_URL + "/recipes/" + recipeId).then((response) => {
 			setRecipe(response.data);
 			setHandleLoader(false);
 		});
+
 		// eslint-disable-next-line
-	}, []);
+	}, [history.location]);
 
 	return (
 		<div className="detail">
@@ -50,8 +51,8 @@ const Detail = () => {
 				<p>Ingredients</p>
 				<div className="instructionCard">
 					<ol>
-						{recipe.ingredients?.map((item) => (
-							<li>{item}</li>
+						{recipe.ingredients?.map((item, index) => (
+							<li key={index}>{item}</li>
 						))}
 					</ol>
 				</div>
@@ -60,8 +61,8 @@ const Detail = () => {
 				<p>Steps</p>
 				<div className="instructionCard">
 					<ol>
-						{recipe.steps?.map((item) => (
-							<li>{item}</li>
+						{recipe.steps?.map((item, index) => (
+							<li key={index}>{item}</li>
 						))}
 					</ol>
 				</div>
@@ -71,8 +72,21 @@ const Detail = () => {
 				<div className="relatedCard">
 					{related.map((recipe) => (
 						<div key={recipe._id} className="card">
-							<img onClick={() => history.push(`/${recipe._id}`)} src={recipe.image} alt="" />
-							<div onClick={() => history.push(`/${recipe._id}`)} className="info">
+							<img
+								onClick={() => {
+									history.push(`/${recipe._id}`);
+									window.scroll(0, 0);
+								}}
+								src={recipe.image}
+								alt=""
+							/>
+							<div
+								onClick={() => {
+									history.push(`/${recipe._id}`);
+									window.scroll(0, 0);
+								}}
+								className="info"
+							>
 								<p>{recipe.name}</p>
 								<p>{recipe.description}</p>
 								<div className="foodInfo">

@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { useHistory, useLocation } from "react-router";
 import CustomLoader from "../../components/CustomLoader/CustomLoader";
 import "./Search.css";
@@ -8,7 +7,6 @@ import "./Search.css";
 const Search = () => {
 	const [resultRecipes, setResultRecipes] = useState([]);
 	const [handleLoader, setHandleLoader] = useState(false);
-	const { searchQuery } = useSelector((state) => state.searchReducer);
 	const history = useHistory();
 	let query = useQuery();
 
@@ -19,11 +17,11 @@ const Search = () => {
 	useEffect(() => {
 		getRecipes();
 		// eslint-disable-next-line
-	}, [searchQuery]);
+	}, [history.location]);
 
 	const getRecipes = () => {
 		setHandleLoader(true);
-		axios.get("http://localhost:8000/recipes/search?query=" + query.get("query")).then((response) => {
+		axios.get(process.env.REACT_APP_BASE_URL + "/recipes/search?query=" + query.get("query")).then((response) => {
 			setResultRecipes(response.data);
 			setHandleLoader(false);
 		});

@@ -14,7 +14,7 @@ const Home = () => {
 
 	useEffect(() => {
 		setHandleLoader(true);
-		axios.get("http://localhost:8000/recipes").then((response) => {
+		axios.get(process.env.REACT_APP_BASE_URL + "/recipes").then((response) => {
 			setRecipes([...response.data]);
 			setHandleLoader(false);
 		});

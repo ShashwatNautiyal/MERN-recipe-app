@@ -20,7 +20,7 @@ const Signup = () => {
 	const onSubmit = (data) => {
 		delete data["rePassword"];
 		axios
-			.post("http://localhost:8000/user/register", JSON.stringify(data), {
+			.post(process.env.REACT_APP_BASE_URL + "/user/register", JSON.stringify(data), {
 				headers: {
 					"Content-Type": "application/json",
 				},

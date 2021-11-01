@@ -18,7 +18,7 @@
 	grid-gap: 72px;
 }
 
-.card > .info {
+.yourRecipes .card > .info {
 	cursor: default;
 }
 

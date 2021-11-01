@@ -2,7 +2,7 @@ import "./Nav.css";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { logout, searchQuery } from "../../actions";
+import { logout } from "../../actions";
 import { useState } from "react";
 
 const Nav = () => {
@@ -13,7 +13,6 @@ const Nav = () => {
 
 	const handleSearch = (e) => {
 		e.preventDefault();
-		dispatch(searchQuery(searchInput));
 		history.push(`/search?query=${searchInput}`);
 		setSearchInput("");
 	};

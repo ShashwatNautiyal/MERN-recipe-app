@@ -20,7 +20,7 @@ const Recipes = () => {
 	const getRecipes = () => {
 		setHandleLoader(true);
 		axios
-			.get("http://localhost:8000/recipes/user/" + userInfo()._id, {
+			.get(process.env.REACT_APP_BASE_URL + "/recipes/user/" + userInfo()._id, {
 				headers: {
 					"auth-token": localStorage.getItem("user"),
 				},
@@ -34,7 +34,7 @@ const Recipes = () => {
 	const handleDelete = (recipe) => {
 		setHandleLoader(true);
 		axios
-			.delete("http://localhost:8000/recipes/" + recipe._id, {
+			.delete(process.env.REACT_APP_BASE_URL + "/recipes/" + recipe._id, {
 				headers: {
 					"auth-token": localStorage.getItem("user"),
 				},
